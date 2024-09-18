@@ -1,0 +1,13 @@
+SELECT nazwa, cena FROM `uslugi` WHERE cena >=50;
+
+SELECT AVG(cena) as srednia_cena, COUNT(*) AS liczba_sulug FROM `uslugi` WHERE kadra_id=2;
+
+SELECT AVG(cena) as srednia_cena, COUNT(*) AS liczba_sulug FROM `uslugi` WHERE kadra_id=2;
+LEFT JOIN kadra ON usluga.kadra_id = kadra_id
+WHERE kadra.stanowisko LIKE "%kosm% ;
+
+
+
+CREATE USER 'kosmetyczka'@'%' IDENTIFIED VIA mysql_native_password USING '***';GRANT USAGE ON *.* TO 'kosmetyczka'@'%' REQUIRE NONE WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;
+
+GRANT SELECT, UPDATE ON `salon`.`uslugi` TO 'kosmetyczka'@'%';
